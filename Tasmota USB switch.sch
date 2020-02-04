@@ -1,0 +1,232 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:USB_A J1
+U 1 1 5E3899EF
+P 2000 2450
+F 0 "J1" H 2057 2917 50  0000 C CNN
+F 1 "USB_A" H 2057 2826 50  0000 C CNN
+F 2 "Connector_USB:USB_A_CNCTech_1001-011-01101_Horizontal" H 2150 2400 50  0001 C CNN
+F 3 " ~" H 2150 2400 50  0001 C CNN
+	1    2000 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_A J2
+U 1 1 5E38A525
+P 2850 2500
+F 0 "J2" H 2907 2967 50  0000 C CNN
+F 1 "USB_A" H 2907 2876 50  0000 C CNN
+F 2 "Connector_USB:USB3_A_Molex_48393-001" H 3000 2450 50  0001 C CNN
+F 3 " ~" H 3000 2450 50  0001 C CNN
+	1    2850 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 2250 2550 2250
+Wire Wire Line
+	2550 2250 2550 2950
+Wire Wire Line
+	2550 2950 3650 2950
+Wire Wire Line
+	3650 2950 3650 2300
+Wire Wire Line
+	3650 2300 3150 2300
+Wire Wire Line
+	2300 2450 2400 2450
+Wire Wire Line
+	2400 2450 2400 1700
+Wire Wire Line
+	2400 1700 3250 1700
+Wire Wire Line
+	3250 1700 3250 2500
+Wire Wire Line
+	3250 2500 3150 2500
+Wire Wire Line
+	3150 2600 3300 2600
+Wire Wire Line
+	3300 2600 3300 1800
+Wire Wire Line
+	3300 1800 2450 1800
+Wire Wire Line
+	2450 1800 2450 2550
+Wire Wire Line
+	2450 2550 2300 2550
+$Comp
+L power:GND #PWR0101
+U 1 1 5E38D289
+P 1900 3450
+F 0 "#PWR0101" H 1900 3200 50  0001 C CNN
+F 1 "GND" H 1905 3277 50  0000 C CNN
+F 2 "" H 1900 3450 50  0001 C CNN
+F 3 "" H 1900 3450 50  0001 C CNN
+	1    1900 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5E38D9BE
+P 3650 2300
+F 0 "#PWR0102" H 3650 2150 50  0001 C CNN
+F 1 "VCC" H 3667 2473 50  0000 C CNN
+F 2 "" H 3650 2300 50  0001 C CNN
+F 3 "" H 3650 2300 50  0001 C CNN
+	1    3650 2300
+	1    0    0    -1  
+$EndComp
+Connection ~ 3650 2300
+$Comp
+L ESP8266:ESP-01v090 U1
+U 1 1 5E38E10A
+P 5150 1250
+F 0 "U1" H 5150 1765 50  0000 C CNN
+F 1 "ESP-01v090" H 5150 1674 50  0000 C CNN
+F 2 "ESP8266:ESP-01" H 5150 1250 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 5150 1250 50  0001 C CNN
+	1    5150 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 1400 4200 1850
+Wire Wire Line
+	4200 2300 4000 2300
+Wire Wire Line
+	4200 1200 4000 1200
+Wire Wire Line
+	4000 1200 4000 2300
+Connection ~ 4000 2300
+Wire Wire Line
+	4000 2300 3650 2300
+Wire Wire Line
+	6100 1100 6300 1100
+$Comp
+L Connector:Conn_01x06_Female J3
+U 1 1 5E38FD6F
+P 6750 2050
+F 0 "J3" H 6778 2026 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 6778 1935 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 6750 2050 50  0001 C CNN
+F 3 "~" H 6750 2050 50  0001 C CNN
+	1    6750 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 1850 4200 1850
+Connection ~ 4200 1850
+Wire Wire Line
+	4200 1850 4200 2300
+Wire Wire Line
+	6550 2150 6300 2150
+Connection ~ 6300 2150
+Wire Wire Line
+	6550 1950 6100 1950
+Wire Wire Line
+	6100 1950 6100 1400
+Wire Wire Line
+	6550 2050 3850 2050
+Wire Wire Line
+	3850 2050 3850 1100
+Wire Wire Line
+	3850 1100 4200 1100
+Wire Wire Line
+	4200 1300 4100 1300
+Wire Wire Line
+	4100 1300 4100 2250
+Wire Wire Line
+	4100 2250 6550 2250
+Wire Wire Line
+	6100 1300 6200 1300
+Wire Wire Line
+	6200 1300 6200 2350
+Wire Wire Line
+	6200 2350 6550 2350
+$Comp
+L Transistor_FET:2N7000 Q1
+U 1 1 5E398675
+P 4700 3100
+F 0 "Q1" H 4904 3146 50  0000 L CNN
+F 1 "2N7000" H 4904 3055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4900 3025 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4700 3100 50  0001 L CNN
+	1    4700 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3450 4800 3450
+Connection ~ 1900 3450
+Wire Wire Line
+	1900 2850 1900 3450
+Wire Wire Line
+	6300 2150 6300 3450
+Wire Wire Line
+	2000 2850 2000 3450
+Connection ~ 2000 3450
+Wire Wire Line
+	2000 3450 1900 3450
+Wire Wire Line
+	4800 3300 4800 3450
+Connection ~ 4800 3450
+Wire Wire Line
+	4800 3450 2750 3450
+Wire Wire Line
+	2750 2900 2750 3450
+Connection ~ 2750 3450
+Wire Wire Line
+	2750 3450 2000 3450
+Wire Wire Line
+	2850 2900 2850 3050
+Wire Wire Line
+	2850 3050 4250 3050
+Wire Wire Line
+	4250 3050 4250 2750
+Wire Wire Line
+	4250 2750 4800 2750
+Wire Wire Line
+	4800 2750 4800 2900
+Wire Wire Line
+	6100 1200 6150 1200
+Wire Wire Line
+	6150 1200 6150 2550
+Wire Wire Line
+	6150 2550 4500 2550
+Wire Wire Line
+	4500 2550 4500 3100
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5E3F9B19
+P 6550 900
+F 0 "SW1" H 6550 1185 50  0000 C CNN
+F 1 "SW_Push" H 6550 1094 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx31-2LFS" H 6550 1100 50  0001 C CNN
+F 3 "~" H 6550 1100 50  0001 C CNN
+	1    6550 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 1300 6200 1300
+Connection ~ 6200 1300
+Wire Wire Line
+	6350 900  6300 900 
+Wire Wire Line
+	6300 900  6300 1100
+Connection ~ 6300 1100
+Wire Wire Line
+	6750 900  6800 900 
+Wire Wire Line
+	6800 900  6800 1300
+Wire Wire Line
+	6300 1100 6300 2150
+$EndSCHEMATC
