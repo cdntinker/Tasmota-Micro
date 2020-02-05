@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "Tasmota-Micro"
+Date "2020-02-04"
+Rev "0.0.2"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -77,11 +77,11 @@ F 3 "" H 1900 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0102
+L power:VBUS #PWR0102
 U 1 1 5E38D9BE
 P 3650 2300
 F 0 "#PWR0102" H 3650 2150 50  0001 C CNN
-F 1 "VCC" H 3667 2473 50  0000 C CNN
+F 1 "VBUS" H 3667 2473 50  0000 C CNN
 F 2 "" H 3650 2300 50  0001 C CNN
 F 3 "" H 3650 2300 50  0001 C CNN
 	1    3650 2300
@@ -100,110 +100,60 @@ F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4200 1400 4200 1850
-Wire Wire Line
-	4200 2300 4000 2300
-Wire Wire Line
-	4200 1200 4000 1200
-Wire Wire Line
-	4000 1200 4000 2300
-Connection ~ 4000 2300
-Wire Wire Line
-	4000 2300 3650 2300
-Wire Wire Line
 	6100 1100 6300 1100
 $Comp
 L Connector:Conn_01x06_Female J3
 U 1 1 5E38FD6F
-P 6750 2050
-F 0 "J3" H 6778 2026 50  0000 L CNN
-F 1 "Conn_01x06_Female" H 6778 1935 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 6750 2050 50  0001 C CNN
-F 3 "~" H 6750 2050 50  0001 C CNN
-	1    6750 2050
+P 6800 1900
+F 0 "J3" H 6828 1876 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 6828 1785 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 6800 1900 50  0001 C CNN
+F 3 "~" H 6800 1900 50  0001 C CNN
+	1    6800 1900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6550 1850 4200 1850
-Connection ~ 4200 1850
-Wire Wire Line
-	4200 1850 4200 2300
-Wire Wire Line
-	6550 2150 6300 2150
-Connection ~ 6300 2150
-Wire Wire Line
-	6550 1950 6100 1950
-Wire Wire Line
-	6100 1950 6100 1400
-Wire Wire Line
-	6550 2050 3850 2050
-Wire Wire Line
-	3850 2050 3850 1100
 Wire Wire Line
 	3850 1100 4200 1100
 Wire Wire Line
-	4200 1300 4100 1300
-Wire Wire Line
-	4100 1300 4100 2250
-Wire Wire Line
-	4100 2250 6550 2250
-Wire Wire Line
 	6100 1300 6200 1300
 Wire Wire Line
-	6200 1300 6200 2350
-Wire Wire Line
-	6200 2350 6550 2350
+	6200 1300 6200 2200
 $Comp
 L Transistor_FET:2N7000 Q1
 U 1 1 5E398675
-P 4700 3100
-F 0 "Q1" H 4904 3146 50  0000 L CNN
-F 1 "2N7000" H 4904 3055 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4900 3025 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4700 3100 50  0001 L CNN
-	1    4700 3100
+P 6000 3100
+F 0 "Q1" H 6204 3146 50  0000 L CNN
+F 1 "2N7000" H 6204 3055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6200 3025 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 6000 3100 50  0001 L CNN
+	1    6000 3100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6300 3450 4800 3450
+	6300 3450 6100 3450
 Connection ~ 1900 3450
 Wire Wire Line
 	1900 2850 1900 3450
-Wire Wire Line
-	6300 2150 6300 3450
 Wire Wire Line
 	2000 2850 2000 3450
 Connection ~ 2000 3450
 Wire Wire Line
 	2000 3450 1900 3450
 Wire Wire Line
-	4800 3300 4800 3450
-Connection ~ 4800 3450
-Wire Wire Line
-	4800 3450 2750 3450
+	6100 3300 6100 3450
 Wire Wire Line
 	2750 2900 2750 3450
 Connection ~ 2750 3450
 Wire Wire Line
 	2750 3450 2000 3450
 Wire Wire Line
-	2850 2900 2850 3050
-Wire Wire Line
-	2850 3050 4250 3050
-Wire Wire Line
-	4250 3050 4250 2750
-Wire Wire Line
-	4250 2750 4800 2750
-Wire Wire Line
-	4800 2750 4800 2900
-Wire Wire Line
 	6100 1200 6150 1200
 Wire Wire Line
 	6150 1200 6150 2550
 Wire Wire Line
-	6150 2550 4500 2550
+	6150 2550 5800 2550
 Wire Wire Line
-	4500 2550 4500 3100
+	5800 2550 5800 3100
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5E3F9B19
@@ -228,5 +178,135 @@ Wire Wire Line
 Wire Wire Line
 	6800 900  6800 1300
 Wire Wire Line
-	6300 1100 6300 2150
+	6300 1100 6300 2000
+$Comp
+L Regulator_Linear:AMS1117-3.3 U2
+U 1 1 5E3A02F5
+P 4650 2450
+F 0 "U2" H 4650 2692 50  0000 C CNN
+F 1 "AMS1117-3.3" H 4650 2601 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 4650 2650 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 4750 2200 50  0001 C CNN
+	1    4650 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5E3A1383
+P 4200 2700
+F 0 "C1" H 4315 2746 50  0000 L CNN
+F 1 "C" H 4315 2655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4238 2550 50  0001 C CNN
+F 3 "~" H 4200 2700 50  0001 C CNN
+	1    4200 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5E3A1999
+P 5100 2700
+F 0 "C2" H 5215 2746 50  0000 L CNN
+F 1 "C" H 5215 2655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5138 2550 50  0001 C CNN
+F 3 "~" H 5100 2700 50  0001 C CNN
+	1    5100 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 1700 5100 1700
+Wire Wire Line
+	6600 1800 6100 1800
+Wire Wire Line
+	6100 1800 6100 1400
+Wire Wire Line
+	6600 1900 3850 1900
+Wire Wire Line
+	3850 1900 3850 1100
+Wire Wire Line
+	6600 2000 6300 2000
+Connection ~ 6300 2000
+Wire Wire Line
+	6300 2000 6300 3450
+Wire Wire Line
+	6600 2200 6200 2200
+Connection ~ 6100 3450
+Wire Wire Line
+	2750 3450 6100 3450
+Wire Wire Line
+	5100 2550 5100 2450
+Wire Wire Line
+	5100 2450 4950 2450
+Wire Wire Line
+	5100 2450 5100 1700
+Connection ~ 5100 2450
+Connection ~ 5100 1700
+Wire Wire Line
+	4350 2450 4200 2450
+Wire Wire Line
+	4200 2450 4200 2550
+Wire Wire Line
+	4200 2450 4200 2300
+Connection ~ 4200 2450
+$Comp
+L power:GND #PWR0103
+U 1 1 5E3C0671
+P 5100 2850
+F 0 "#PWR0103" H 5100 2600 50  0001 C CNN
+F 1 "GND" H 5105 2677 50  0000 C CNN
+F 2 "" H 5100 2850 50  0001 C CNN
+F 3 "" H 5100 2850 50  0001 C CNN
+	1    5100 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5E3C0C40
+P 4650 2750
+F 0 "#PWR0104" H 4650 2500 50  0001 C CNN
+F 1 "GND" H 4655 2577 50  0000 C CNN
+F 2 "" H 4650 2750 50  0001 C CNN
+F 3 "" H 4650 2750 50  0001 C CNN
+	1    4650 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5E3C12E2
+P 4200 2850
+F 0 "#PWR0105" H 4200 2600 50  0001 C CNN
+F 1 "GND" H 4205 2677 50  0000 C CNN
+F 2 "" H 4200 2850 50  0001 C CNN
+F 3 "" H 4200 2850 50  0001 C CNN
+	1    4200 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 3300 5750 3300
+Wire Wire Line
+	5750 3300 5750 2800
+Wire Wire Line
+	5750 2800 6100 2800
+Wire Wire Line
+	6100 2800 6100 2900
+Wire Wire Line
+	2850 2900 2850 3300
+Wire Wire Line
+	3650 2300 4200 2300
+Wire Wire Line
+	3950 1300 3950 2100
+Wire Wire Line
+	3950 1300 4200 1300
+Wire Wire Line
+	3950 2100 6600 2100
+Wire Wire Line
+	4050 1700 4050 1400
+Wire Wire Line
+	4050 1400 4200 1400
+Wire Wire Line
+	4050 1700 5100 1700
+Wire Wire Line
+	4200 1200 4050 1200
+Wire Wire Line
+	4050 1200 4050 1400
+Connection ~ 4050 1400
 $EndSCHEMATC
