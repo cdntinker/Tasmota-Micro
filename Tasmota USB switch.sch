@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Tasmota-Micro"
 Date "2020-02-04"
-Rev "0.0.2"
+Rev "0.0.3"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -166,17 +166,7 @@ F 3 "~" H 6550 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6800 1300 6200 1300
-Connection ~ 6200 1300
-Wire Wire Line
-	6350 900  6300 900 
-Wire Wire Line
-	6300 900  6300 1100
-Connection ~ 6300 1100
-Wire Wire Line
 	6750 900  6800 900 
-Wire Wire Line
-	6800 900  6800 1300
 Wire Wire Line
 	6300 1100 6300 2000
 $Comp
@@ -309,4 +299,58 @@ Wire Wire Line
 Wire Wire Line
 	4050 1200 4050 1400
 Connection ~ 4050 1400
+$Comp
+L Device:LED D1
+U 1 1 5E3F3E8F
+P 7500 2650
+F 0 "D1" V 7539 2533 50  0000 R CNN
+F 1 "LED" V 7448 2533 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7500 2650 50  0001 C CNN
+F 3 "~" H 7500 2650 50  0001 C CNN
+	1    7500 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E3F468B
+P 7500 3050
+F 0 "R1" H 7570 3096 50  0000 L CNN
+F 1 "R" H 7570 3005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7430 3050 50  0001 C CNN
+F 3 "~" H 7500 3050 50  0001 C CNN
+	1    7500 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2900 7500 2800
+$Comp
+L power:VBUS #PWR0106
+U 1 1 5E3FB407
+P 7500 2300
+F 0 "#PWR0106" H 7500 2150 50  0001 C CNN
+F 1 "VBUS" H 7517 2473 50  0000 C CNN
+F 2 "" H 7500 2300 50  0001 C CNN
+F 3 "" H 7500 2300 50  0001 C CNN
+	1    7500 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2300 7500 2500
+Wire Wire Line
+	7500 3200 7500 3800
+Wire Wire Line
+	7500 3800 5750 3800
+Wire Wire Line
+	5750 3800 5750 3300
+Connection ~ 5750 3300
+Wire Wire Line
+	6200 900  6200 1300
+Wire Wire Line
+	6200 900  6350 900 
+Connection ~ 6200 1300
+Wire Wire Line
+	6800 900  6800 1100
+Wire Wire Line
+	6800 1100 6300 1100
+Connection ~ 6300 1100
 $EndSCHEMATC
